@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 30% 20%,
+            #fff7f4 0 3%,
+            transparent 4%),
+        linear-gradient(145deg,
+            #f6e8e5,
+            #f2dfe1 48%,
+            #ead8e2);
+
+    color: #57222d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* CARD */
+
+.card {
+    width: min(720px, 88vw);
+    min-height: 450px;
+
+    background: rgba(247, 255, 247, 0.9);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 22px 55px rgba(100, 55, 65, 0.13);
+
+    padding: 44px 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* STEPS */
+
+.step {
+    display: none;
+
+    width: 100%;
+
+    text-align: center;
+
+    animation: in 0.45s ease;
+}
+
+.step.active {
+    display: block;
+}
+
+@keyframes in {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+
+/* TEXT */
+
+h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+
+    font-size: 39px;
+
+    line-height: 1.08;
+
+    margin: 20px 0;
+
+    color: #56202a;
+}
+
+p {
+    font-size: 16px;
+    color: #6e5960;
+}
+
+
+/* DOG */
+
+.dog {
+    width: 145px;
+    height: 145px;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+    display: block;
+
+    margin: 0 auto 24px;
+
+    box-shadow:
+        0 7px 16px rgba(0, 0, 0, 0.08);
+}
+
+
+/* BUTTON AREA */
+
+.choice-area {
+    height: 75px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.choice-area button,
+.pink {
+    border: 0;
+
+    border-radius: 999px;
+
+    padding: 14px 34px;
+
+    font-size: 17px;
+
+    font-family: Georgia, serif;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 12px rgba(160, 40, 95, 0.16);
+
+    transition:
+        transform 0.18s,
+        box-shadow 0.18s;
+}
+
+
+/* YES */
+
+.yes,
+.pink {
+    background:
+        linear-gradient(90deg,
+            #e95b8e,
+            #df4380);
+
+    color: white;
+}
+
+.yes:hover,
+.pink:hover {
+
+    transform:
+        translateY(-2px) scale(1.02);
+
+    box-shadow:
+        0 8px 18px rgba(160, 40, 95, 0.22);
+}
+
+
+/* NO */
+
+.no {
+    background: #a65bd2;
+
+    color: white;
+
+    position: absolute;
+}
+
+
+/* SECOND SCREEN */
+
+.big-icon {
+
+    font-size: 64px;
+
+    background: #ef2a1f;
+
+    border-radius: 20px;
+
+    width: 110px;
+    height: 110px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.step2 h1 {
+    font-size: 37px;
+}
+
+.step2 .pink {
+    margin-top: 22px;
+}
+
+
+/* FOOD */
+
+.food-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin: 28px auto 0;
+
+    max-width: 520px;
+}
+
+.food-grid button {
+
+    border: 1px solid transparent;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    padding: 20px 10px;
+
+    border-radius: 16px;
+
+    color: #5d3037;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.food-grid button span {
+
+    display: block;
+
+    font-size: 34px;
+
+    margin-bottom: 8px;
+}
+
+.food-grid button:hover,
+.food-grid button.selected {
+
+    border-color: #d08c9d;
+
+    background: #fff1f2;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* DATE */
+
+.calendar-icon {
+
+    font-size: 44px;
+
+    margin-bottom: 14px;
+}
+
+.step4 {
+
+    text-align: left;
+
+    max-width: 540px;
+
+    margin: auto;
+}
+
+.step4 h1 {
+
+    text-align: center;
+
+    font-size: 37px;
+
+    margin-bottom: 28px;
+}
+
+.step4 label {
+
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-weight: 600;
+
+    margin: 14px 0 7px;
+}
+
+.step4 input,
+.step4 select {
+
+    width: 100%;
+
+    height: 53px;
+
+    border: 1px solid #bfb8b8;
+
+    border-radius: 12px;
+
+    background: #f8fbf7;
+
+    padding: 0 15px;
+
+    font-size: 16px;
+
+    color: #5c4d51;
+
+    outline: none;
+}
+
+
+/* FULL BUTTON */
+
+.full {
+
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+
+/* FINAL */
+
+.final h1 {
+
+    font-size: 36px;
+}
+
+.final p {
+
+    line-height: 1.5;
+
+    font-family: Georgia, serif;
+}
+
+.tiny-hearts {
+
+    letter-spacing: 9px;
+
+    color: #bd667b;
+
+    margin: 30px 0 15px;
+}
+
+
+/* REPLIT BADGE */
+
+.site-badge {
+
+    position: absolute;
+
+    bottom: 12px;
+
+    z-index: 3;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* FLOATING HEARTS */
+
+.heart {
+
+    position: absolute;
+
+    color: #9f5367;
+
+    font-size: 17px;
+
+    animation:
+        float 7s linear infinite;
+
+    opacity: 0.55;
+
+    z-index: 1;
+}
+
+@keyframes float {
+
+    0% {
+
+        transform:
+            translateY(110vh) rotate(0);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.6;
+    }
+
+    100% {
+
+        transform:
+            translateY(-15vh) rotate(180deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+
+    .card {
+
+        padding: 30px 22px;
+
+        min-height: 420px;
+
+        border-radius: 23px;
+    }
+
+    h1,
+    .final h1,
+    .step2 h1 {
+        font-size: 28px;
+    }
+
+    .dog {
+
+        width: 115px;
+        height: 115px;
+    }
+
+    .food-grid {
+        gap: 8px;
+    }
+
+    .food-grid button {
+
+        padding: 15px 5px;
+
+        font-size: 14px;
+    }
+
+    .food-grid button span {
+        font-size: 27px;
+    }
+
+    .site-badge {
+        font-size: 10px;
+    }
+
+    .step4 h1 {
+        font-size: 29px;
+    }
+}
